@@ -4,51 +4,106 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,700&display=swap&subset=japanese');
 /* フォントを指定したいところで */
 
-logo img{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover; /* 画像のトリミング */
+
+/* おしゃれな英語フォント & 見やすい和文フォント */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,400&family=Noto+Serif+JP:wght@400;600&display=swap');
+
+/* ========== 全体設定 ========== */
+body {
+    font-size: 15px;
+    font-family: 'Noto Serif JP', "Yu Mincho", "游明朝", serif;
+    color: #3b3531; /* 深みのあるブラウン */
+    background-color: #faf6f0; /* 温かみのあるエクリュ（生成り）色 */
+    margin: 0;
+    padding: 40px 20px;
+    line-height: 1.8;
 }
 
-logotohome img{
-    border-radius: 70%;
-    width: 70px;
-    height: 70px;
-    object-fit: cover; /* 画像のトリミング */
+/* 中央のメインカード枠 */
+body > div, .container {
+    max-width: 820px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px solid #2d4a3e; /* 深緑（ダークグリーン）の引き締まった枠線 */
+    border-radius: 16px;
+    padding: 40px 35px;
+    box-shadow: 0 10px 30px rgba(45, 74, 62, 0.08);
 }
 
+/* ========== ヘッダー（お花屋さんの看板風） ========== */
+h1 {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 38px;
+    font-weight: 600;
+    color: #d96b27; /* 鮮やかで温かいチューリップのオレンジ */
+    text-align: center;
+    letter-spacing: 3px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    padding-bottom: 15px;
+}
 
+/* ヘッダーの下のおしゃれな一輪の花マーク */
+h1::after {
+    content: "🌷";
+    display: block;
+    font-size: 18px;
+    margin-top: 8px;
+}
 
-/* ========== common ========== */
-html, body {
-	font-size: 16px;
-	font-family: sans-serif;
-	color: #393939;
-    margin-left: 15px;
+h2 {
+    font-size: 16px;
+    color: #2d4a3e; /* 深緑 */
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 2px;
     margin-bottom: 40px;
-	background: #efefef;
-}
-h1{
-    text-indent: 0em;
-}
-h2{
-    margin-left: 1em;
-    margin-top: 1em;
-}
-h3{
-    margin-left: 2em;
-}
-div{
-    margin-top: 1em;
-    margin-left: 3em;
-}
-p{
-    margin-left: 3em;
-}
-span.blackback{
-    text-indent: 3em;
-    background: #393939;
-    color: #efefef;
 }
 
+/* ========== セクション見出し ========== */
+h3 {
+    font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #2d4a3e; /* 見出しの背景を深緑に */
+    padding: 8px 15px;
+    border-radius: 6px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ========== 文章 ========== */
+p {
+    font-size: 14px;
+    color: #554d46;
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+/* ========== 画像のおしゃれな見せ方 ========== */
+img {
+    max-width: 46%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #f2e8dc; /* 薄いオレンジベージュの額縁風 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    margin: 8px 1%;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+/* 画像にマウスを乗せた時に少し浮かぶ演出 */
+img:hover {
+    transform: translateY(-3px);
+}
+
+/* ========== ワンポイントカード（まとめなど） ========== */
+div.yellow-box, .flower-card {
+    background-color: #fcf4ee; /* 薄いオレンジ・テラコッタ系の背景 */
+    border-left: 4px solid #d96b27; /* オレンジのアクセントライン */
+    border-radius: 0 12px 12px 0;
+    padding: 20px 25px;
+    margin: 30px 0;
+}
